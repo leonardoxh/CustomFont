@@ -10,7 +10,14 @@ buildscript {
 }
 
 allprojects {
+    group = 'com.opens.components.customfont'
+    version = '1'
     repositories {
         mavenCentral()
     }
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
 }
+
+apply plugin: 'android-reporting'
