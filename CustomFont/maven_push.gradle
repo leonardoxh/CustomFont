@@ -5,12 +5,14 @@ def isReleaseBuild() {
     return VERSION_NAME.contains("SNAPSHOT") == false
 }
 
-def getReleaseRepositoryUrl() {
-    return "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
-}
-
-def getSnapshotRepositoryUrl() {
-    return "https://oss.sonatype.org/content/repositories/snapshots/"
+def getRepositoryUrl() {
+    if(isReleaseBuild()) {
+        println 'RELEASE BUILD'
+        return "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+    } else {
+        println 'DEBUG BUILD'
+        return "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
 }
 
 def getRepositoryUsername() {
@@ -31,10 +33,7 @@ afterEvaluate { project ->
                 pom.artifactId = POM_ARTIFACT_ID
                 pom.version = VERSION_NAME
 
-                repository(url: getReleaseRepositoryUrl()) {
-                    authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
-                }
-                snapshotRepository(url: getSnapshotRepositoryUrl()) {
+                repository(url: getRepositoryUrl()) {
                     authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
                 }
 

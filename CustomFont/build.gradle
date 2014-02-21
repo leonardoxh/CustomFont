@@ -10,8 +10,8 @@ buildscript {
 }
 
 allprojects {
-    group = 'com.opens.components.customfont'
-    version = '1'
+    group = GROUP
+    version = VERSION_NAME
     repositories {
         mavenCentral()
     }
