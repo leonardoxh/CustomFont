@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="font">
-        <attr name="font" format="string" />
+        <attr name="fontNormal" format="string"/>
+        <attr name="fontBold" format="string"/>
+        <attr name="fontItalic" format="string"/>
     </declare-styleable>
 </resources>

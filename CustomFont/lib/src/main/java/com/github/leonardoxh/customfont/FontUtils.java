@@ -18,6 +18,7 @@ package com.github.leonardoxh.customfont;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.TextView;
@@ -26,16 +27,19 @@ public final class FontUtils {
 
     static void applyFont(Context context, TextView textView, AttributeSet attrs) {
         TypedArray style = context.obtainStyledAttributes(attrs, R.styleable.font);
-        applyFont(context, textView, style.getString(R.styleable.font_font));
+        applyFont(context, textView, style.getString(R.styleable.font_fontNormal));
         style.recycle();
     }
 
     public static boolean applyFont(Context context, TextView textView, String font) {
+        if(TextUtils.isEmpty(font)) {
+            throw new RuntimeException("The font can't be null");
+        }
         try {
             textView.setTypeface(Typeface.createFromAsset(context.getAssets(), "fonts/" + font + ".ttf"));
             return true;
         } catch(Exception e) {
-            Log.d("FontRadioButton", "Error to obtain the font: " + font, e);
+            Log.w("FontRadioButton", "Error to obtain the font: " + font, e);
         }
         return false;
     }
