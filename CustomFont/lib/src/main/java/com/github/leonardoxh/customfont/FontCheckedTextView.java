@@ -17,21 +17,21 @@ package com.github.leonardoxh.customfont;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.Button;
+import android.widget.CheckedTextView;
 
-public class FontButton extends Button {
+public class FontCheckedTextView extends CheckedTextView {
 
-    public FontButton(Context context) {
+    public FontCheckedTextView(Context context) {
         super(context);
     }
 
-    public FontButton(Context context, AttributeSet attrs) {
+    public FontCheckedTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setCustomFont(context, attrs);
     }
 
-    public FontButton(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
+    public FontCheckedTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
         setCustomFont(context, attrs);
     }
 

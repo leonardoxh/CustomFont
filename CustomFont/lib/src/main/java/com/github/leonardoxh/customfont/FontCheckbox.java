@@ -17,21 +17,21 @@ package com.github.leonardoxh.customfont;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.Button;
+import android.widget.CheckBox;
 
-public class FontButton extends Button {
+public class FontCheckbox extends CheckBox {
 
-    public FontButton(Context context) {
+    public FontCheckbox(Context context) {
         super(context);
     }
 
-    public FontButton(Context context, AttributeSet attrs) {
+    public FontCheckbox(Context context, AttributeSet attrs) {
         super(context, attrs);
         setCustomFont(context, attrs);
     }
 
-    public FontButton(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
+    public FontCheckbox(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
         setCustomFont(context, attrs);
     }
 
