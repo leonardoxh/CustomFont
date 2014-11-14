@@ -27,7 +27,7 @@ public final class FontUtils {
 
     static void applyFont(Context context, TextView textView, AttributeSet attrs) {
         TypedArray style = context.obtainStyledAttributes(attrs, R.styleable.font);
-        applyFont(context, textView, style.getString(R.styleable.font_fontNormal));
+        applyFont(context, textView, style.getString(R.styleable.font_font));
         style.recycle();
     }
 
