@@ -11,7 +11,7 @@ Limitations
 
 Sample:
 =========
-```
+```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -31,7 +31,7 @@ Gradle:
 =========
 ```
 dependencies {
-    compile 'com.github.leonardoxh:custom-font:+'
+    compile 'com.github.leonardoxh:custom-font:1.2'
 }
 ```
 
