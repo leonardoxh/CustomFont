@@ -27,9 +27,11 @@ Sample:
 
 ```
 
+Also you can apply the font to any of your custom components to using the <code>FontUtils.applyFont(Context, TextView, String)</code> :)
+
 Gradle:
 =========
-```
+```groovy
 dependencies {
     compile 'com.github.leonardoxh:custom-font:1.2'
 }
