@@ -1,3 +1,5 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-CustomFont-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1722)
+
 CustomFont
 ==========
 This library let you apply custom fonts to your android projects it's very simple to use just
